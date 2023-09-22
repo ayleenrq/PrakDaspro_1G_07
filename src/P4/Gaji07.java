@@ -17,6 +17,6 @@ public class Gaji07 {
         TotGaji = (jmlMasuk * gaji) - (JmlTdkMasuk * potGaji);
 
         System.out.println("Gaji yang diterima: " + TotGaji);
-        
+
     }    
 }
