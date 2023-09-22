@@ -5,8 +5,13 @@ public class Gaji07 {
     public static void main(String[] args) {
         Scanner sc07 =new Scanner(System.in);
 
-        int jmlMasuk, JmlTdkMasuk, TotGaji;
-        int gaji = 40000, potGaji = 25000;
+        int jmlMasuk, JmlTdkMasuk, TotGaji, gaji, potGaji;
+
+        System.out.println("Masukkan besaran gaji: ");
+        gaji=sc07.nextInt();
+
+        System.out.println("Masukkan potongan gaji: ");
+        potGaji=sc07.nextInt();
 
         System.out.println("Jumlah Hari Masuk Kerja: ");
         jmlMasuk=sc07.nextInt();
@@ -17,6 +22,5 @@ public class Gaji07 {
         TotGaji = (jmlMasuk * gaji) - (JmlTdkMasuk * potGaji);
 
         System.out.println("Gaji yang diterima: " + TotGaji);
-
     }    
 }
