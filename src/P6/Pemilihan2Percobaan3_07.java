@@ -11,10 +11,11 @@ public class Pemilihan2Percobaan3_07 {
     
         System.out.print("Kategori : ");
         kategori = input07.nextLine();
+
         System.out.print("Penghasilan : ");
         penghasilan = input07.nextInt();
 
-        if (kategori.equalsIgnoreCase("pekerja")) {
+        if (kategori.equals("pekerja")) {
             if (penghasilan <= 2000000)
                 pajak = 0.1;
             else if (penghasilan <= 3000000)
@@ -23,7 +24,8 @@ public class Pemilihan2Percobaan3_07 {
                 pajak = 0.2;
             gajiBersih = (int) (penghasilan - ( penghasilan * pajak ));
             System.out.println("Gaji Bersih : " + gajiBersih);
-        } else if (kategori.equalsIgnoreCase("pebisnis")) {
+        }
+        else if (kategori.equals("pebisnis")) {
             if (penghasilan <= 2500000)
                 pajak = 0.15;
             else if (penghasilan <= 3500000)
@@ -32,7 +34,8 @@ public class Pemilihan2Percobaan3_07 {
                 pajak = 0.25;
             gajiBersih = (int) (penghasilan - ( penghasilan * pajak ));
             System.out.println("Gaji Bersih : " + gajiBersih);
-        } else
+        }
+        else
             System.out.println("Kategori Salah");
     }   
 }
