@@ -1,6 +1,5 @@
 package P7;
 import java.util. Scanner;
-
 public class WhileGaji07 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -20,9 +19,9 @@ public class WhileGaji07 {
             System.out.println("Pilihan jabatan - Direktur, Manager, Karyawan");
             System.out.print("Masukkan jabatan karyawan ke-" + (i+1) + ": ");
             jabatan = scan.next();
-
             System.out.print("Masukkan jumlah jam lembur: ");
             jumlahJamLembur = scan.nextInt();
+            i++;
 
             if (jabatan.equalsIgnoreCase("Direktur")) {
                 continue;
@@ -32,9 +31,12 @@ public class WhileGaji07 {
             }
             else if (jabatan.equalsIgnoreCase("Karyawan")) {
                 gajiLembur = jumlahJamLembur * 75000;
-            }
+            } else {
+                i--;
+                System.out.println("Jabatan Invalid");
+                continue;
+            } 
             totalGajiLembur += gajiLembur;
-            i++;
         }
         System.out.println("Total gaji lembur: " + totalGajiLembur); 
         scan.close();
