@@ -3,21 +3,21 @@ import java.util.Scanner;
 
 public class DoWhileCuti07 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc07 = new Scanner(System.in);
 
         String konfirmasi;
         int jatahCuti, jumlahHari;
 
         System.out.print("Jatah cuti: ");
-        jatahCuti = sc.nextInt();
+        jatahCuti = sc07.nextInt();
 
         do {
             System.out.print("Apakah anda ingin mengambil cuti (y/t)? ");
-            konfirmasi = sc.next();
+            konfirmasi = sc07.next();
 
-            if (konfirmasi.equalsIgnoreCase("y")); {
+            if (konfirmasi.equalsIgnoreCase("y")) {
                 System.out.print("Jumlah hari: ");
-                jumlahHari = sc.nextInt();
+                jumlahHari = sc07.nextInt();
 
                 if (jumlahHari <= jatahCuti) {
                     jatahCuti -= jumlahHari;
@@ -27,6 +27,8 @@ public class DoWhileCuti07 {
                     System.out.println("Sisa jatah cuti anda tidak mencukupi");
                     continue;
                 }
+            } else if (konfirmasi.equals("t")) {
+                break;
             }
         } while (jatahCuti > 0);
     }    
