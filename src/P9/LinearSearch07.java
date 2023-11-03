@@ -21,12 +21,16 @@ public class LinearSearch07 {
         System.out.print("Masukkan key yang ingin dicari : ");
         key = ayleen07.nextInt();
         
-            for (int i = 0; i < arrayInt.length; i++) {
+        for (int i = 0; i < arrayInt.length; i++) {
             if (arrayInt[i] == key) {
                 hasil = i;
                 break;
             }
         }
-        System.out.println("Key ada di posisi indeks ke-" + hasil);
+        if (hasil != 0) {
+            System.out.println("Key ada di posisi indeks ke-" + hasil);
+        } else {
+            System.out.println("Key tidak ditemukan");
+        }
     }
 }
