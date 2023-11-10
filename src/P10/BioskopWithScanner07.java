@@ -28,7 +28,7 @@ public class BioskopWithScanner07 {
                     kolom = ayleen07.nextInt();
                     ayleen07.nextLine();
 
-                    if ((baris <= penonton.length) || (kolom <= penonton[baris-1].length)) {
+                    if ((baris <= penonton.length) && (kolom <= penonton[baris-1].length)) {
                         penonton[baris -1][kolom-1] = nama;
                         System.out.println("Data berhasil di inputkan");
                     } else {
