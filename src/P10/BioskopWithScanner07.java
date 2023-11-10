@@ -8,14 +8,22 @@ public class BioskopWithScanner07 {
         String nama, next, menu;
         int baris, kolom;
         String[][] penonton = new String[5][5];
-        boolean exit = false, duplicate = false;
+        for (int i = 0; i < penonton.length; i++) {
+            for (int j = 0; j < penonton[i].length; j++) {
+                penonton[i][j] = "***";
+            }
+        }
+        boolean exit = false;
 
         do {
-            System.out.println("Menu 1: Input data penonton");
-            System.out.println("Menu 2: Tampilkan daftar penonton");
-            System.out.println("Menu 3: Exit");
-            System.out.print("Masukkan Menu (1/2/3) : ");
+            System.out.println("=====================================");
+            System.out.println("| Menu 1: Input data penonton       |");
+            System.out.println("| Menu 2: Tampilkan daftar penonton |");
+            System.out.println("| Menu 3: Exit                      |");
+            System.out.println("=====================================");
+            System.out.print("| Masukkan Menu (1/2/3) : ");
             menu = ayleen07.nextLine();
+            System.out.println("=====================================");
 
             switch (menu) {
                 case "1":
@@ -31,12 +39,12 @@ public class BioskopWithScanner07 {
                     if ((baris > penonton.length) || (kolom > penonton[baris-1].length)) {
                         System.out.println("Pilihan kursi tidak tersedia, silahkan pilih ulang!");
                     } 
-                    else if (penonton[baris-1][kolom-1] != null) {
-                        System.out.println("Pilihan kursi sudah dipilih, silahkan pilih ulang!");
-                    }
-                    else {
+                    else if (penonton[baris-1][kolom-1].equals("***")){
                         penonton[baris -1][kolom-1] = nama;
                         System.out.println("Data berhasil di inputkan");
+                    }
+                    else {
+                        System.out.println("Pilihan kursi sudah dipilih, silahkan pilih ulang!");
                     }
     
                     System.out.print("Input penonton lainnya? (y/n) : ");
@@ -53,6 +61,7 @@ public class BioskopWithScanner07 {
                     }
                 break;
                 case "3":
+                    System.out.println("Terimakasih telah menggunakan program ini!");
                     exit = true;
                 break;
                 default:
