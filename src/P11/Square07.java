@@ -12,7 +12,6 @@ public class Square07 {
             for (int j = 0; j <= nilai; j++) {
                 System.out.print("*");
             }
-            System.out.println();
         }
     }
 }
