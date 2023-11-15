@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class NestedLoop_2341720012 {
     public static void main(String[] args) {
         Scanner ayleen07 = new Scanner(System.in);
-        int[][] array = new int[2][3];
+        int[][] array = new int[5][7];
 
         for (int i = 0; i < array.length; i++) {
             System.out.println("Kota ke-" + (i+1));
