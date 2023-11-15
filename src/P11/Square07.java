@@ -8,7 +8,7 @@ public class Square07 {
         System.out.print("Masukkan nilai N : ");
         int nilai = ayleen07.nextInt();
 
-        for (int i = 1; i <= nilai; i++) {
+        for (int i = 0; i <= nilai; i++) {
             for (int j = 1; j <= nilai; j++) {
                 System.out.print("*");
             }
