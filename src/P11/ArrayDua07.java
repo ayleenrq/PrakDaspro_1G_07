@@ -60,6 +60,12 @@ public class ArrayDua07 {
             System.out.println("");
         }
         System.out.println("-----------------------------------");
+
+        System.out.println("Data Kecepatan Angin:");
+        for (int i = 0; i < data.length; i++) {
+            System.out.print(data[i][2] + " ");
+        }
+        System.out.println("\n-----------------------------------");
         System.out.printf("Rata - rata suhu : %.2f\n", rata[0]);
         System.out.printf("Presentase kelembapan terendah : %s\n", min[1]);
     }
