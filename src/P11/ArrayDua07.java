@@ -8,6 +8,7 @@ public class ArrayDua07 {
         int[][] data = new int[4][4];
         int jam[] = {3, 6, 9, 12};
         int min[] = {100, 100, 100, 100};
+        int max[] = {0, 0, 0, 0};
         double total[] = {0, 0, 0, 0};
         double rata[] = {0, 0, 0, 0};
 
@@ -20,6 +21,9 @@ public class ArrayDua07 {
                         data[i][j] = ayleen07.nextInt();
                         if (min[j] > data[i][j]) {
                             min[j] = data[i][j];
+                        } 
+                        if (max[j] < data[i][j]) {
+                            max[j] = data[i][j];
                         }
                         total[j] += data[i][j];
                         break;
@@ -29,6 +33,9 @@ public class ArrayDua07 {
                         if (min[j] > data[i][j]) {
                             min[j] = data[i][j];
                         }
+                        if (max[j] < data[i][j]) {
+                            max[j] = data[i][j];
+                        }
                         total[j] += data[i][j];
                         break;
                     case 2 : 
@@ -37,6 +44,9 @@ public class ArrayDua07 {
                         if (min[j] > data[i][j]) {
                             min[j] = data[i][j];
                         }
+                        if (max[j] < data[i][j]) {
+                            max[j] = data[i][j];
+                        }
                         total[j] += data[i][j];
                         break;
                     case 3 :
@@ -44,6 +54,9 @@ public class ArrayDua07 {
                         data[i][j] = ayleen07.nextInt();
                         if (min[j] > data[i][j]) {
                             min[j] = data[i][j];
+                        }
+                        if (max[j] < data[i][j]) {
+                            max[j] = data[i][j];
                         }
                         total[j] += data[i][j];
                         break;
@@ -60,12 +73,6 @@ public class ArrayDua07 {
             System.out.println("");
         }
         System.out.println("-----------------------------------");
-
-        System.out.println("Data Kecepatan Angin:");
-        for (int i = 0; i < data.length; i++) {
-            System.out.print(data[i][2] + " ");
-        }
-        System.out.println("\n-----------------------------------");
         System.out.printf("Rata - rata suhu : %.2f\n", rata[0]);
         System.out.printf("Presentase kelembapan terendah : %s\n", min[1]);
     }
