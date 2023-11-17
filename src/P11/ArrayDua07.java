@@ -75,5 +75,6 @@ public class ArrayDua07 {
         System.out.println("-----------------------------------");
         System.out.printf("Rata - rata suhu : %.2f\n", rata[0]);
         System.out.printf("Presentase kelembapan terendah : %s\n", min[1]);
+        System.out.printf("Nilai maksimum index UV : %s\n", max[3]);
     }
 }
