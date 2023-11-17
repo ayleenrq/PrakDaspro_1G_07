@@ -14,6 +14,9 @@ public class Tugas4_07 {
                     System.out.print(namaArray[i][j] + "  ");
                 } else {
                     index = 0;
+                    namaArray[i][j] = nama[index];
+                    index++;
+                    System.out.print(namaArray[i][j] + "  ");
                 }
             }
             System.out.println();
