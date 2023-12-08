@@ -12,12 +12,16 @@ public class Percobaan2_07 {
         System.out.print("Pangkat : ");
         pangkat = ayleen07.nextInt();
 
-        System.out.println(hitungPangkat(bilangan, pangkat));
+        System.out.println("Hasil perhitungan pangkat adalah");
+        int hasil = hitungPangkat(bilangan, pangkat);
+        System.out.println(" = " + hasil);
     }
     static int hitungPangkat(int x, int y) {
         if (y == 0) {
+            System.out.print(1);
             return (1);
         } else {
+            System.out.print(x + " x ");
             return (x * hitungPangkat(x, y - 1));
         }
     }
